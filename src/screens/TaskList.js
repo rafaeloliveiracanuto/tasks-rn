@@ -7,6 +7,8 @@ import todayImage from '../../assets/imgs/today.jpg'
 import moment from 'moment'
 import 'moment/locale/en-gb'
 
+import Task from '../components/Task'
+
 export default class TaskList extends Component {
     render() {
         const today = moment().locale('en-gb').format('ddd, D MMMM')
@@ -20,10 +22,10 @@ export default class TaskList extends Component {
                     </View>
                 </ImageBackground>
                 <View style={styles.taskList}>
-                    <Text>Task 01</Text>
-                    <Text>Task 02</Text>
-                    <Text>Task 03</Text>
-                    <Text>Task 04</Text>
+                    <Task description='Buy Book' estimateAt={new Date()}
+                        doneAt={new Date()}/>
+                    <Task description='Read Book' estimateAt={new Date()}
+                        doneAt={null}/>
                 </View>
                 
             </View>
