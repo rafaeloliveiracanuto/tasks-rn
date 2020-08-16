@@ -1,3 +1,4 @@
+/* eslint-disable */ 
 import React from 'react'
 import { View, Text, StyleSheet, TouchableWithoutFeedback } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
@@ -6,8 +7,7 @@ import moment from 'moment'
 import 'moment/locale/en-gb'
 
 export default props => {
-
-    const doneOrNotStyle = props.doneAt && { textDecorationLine: 'line-through' }
+    const doneOrNotStyle = props.doneAt && {textDecorationLine: 'line-through'};
 
     const date = props.doneAt ? props.doneAt : props.estimateAt
     const formattedDate = moment(date).locale('en-gb').format('ddd, D MMMM')

@@ -1,8 +1,11 @@
+/* eslint-disable */
 import React, { Component } from 'react'
-import { View, Text, ImageBackground, StyleSheet, FlatList } from 'react-native'
+import { View, Text, ImageBackground, StyleSheet, FlatList, TouchableOpacity, Platform } from 'react-native'
 
 import Theme from '../Theme'
 import todayImage from '../../assets/imgs/today.jpg'
+
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 import moment from 'moment'
 import 'moment/locale/en-gb'
@@ -12,6 +15,7 @@ import Task from '../components/Task'
 export default class TaskList extends Component {
     
     state = {
+        showDoneTasks: true,
         tasks: [{
             id: Math.random(),
             description: 'Buy React Native Book',
