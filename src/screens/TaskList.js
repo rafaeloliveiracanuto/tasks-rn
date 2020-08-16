@@ -37,10 +37,9 @@ export default class TaskList extends Component {
                     </View>
                 </ImageBackground>
                 <View style={styles.taskList}>
-                    <Task description='Buy Book' estimateAt={new Date()}
-                        doneAt={new Date()}/>
-                    <Task description='Read Book' estimateAt={new Date()}
-                        doneAt={null}/>
+                    <FlatList data={this.state.tasks}
+                        keyExtractor={item => `${item.id}`}
+                        renderItem={({item}) => <Task {...item} /> } />
                 </View>
                 
             </View>
