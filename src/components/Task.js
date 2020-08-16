@@ -21,11 +21,13 @@ export default props => {
 const getCheckView = (doneAt) => {
     if (doneAt != null) {
         return (
-            <View><Text>Done</Text></View>
+            <View style={styles.done}>
+                <Icon name='check' size={20} color='#FFF'></Icon>
+            </View>
         )
     } else {
         return (
-            <View><Text>Pending</Text></View>
+            <View style={styles.pending}></View>
         )
     }
 }
@@ -40,5 +42,22 @@ const styles = StyleSheet.create({
     },
     checkContainer: {
         width: '20%',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    pending: {
+        height: 25,
+        width: 25,
+        borderRadius: 13,
+        borderWidth: 1,
+        borderColor: '#555',
+    },
+    done: {
+        height: 25,
+        width: 25,
+        borderRadius: 13,
+        backgroundColor: '#4D7031',
+        alignItems: 'center',
+        justifyContent: 'center',
     }
 })
