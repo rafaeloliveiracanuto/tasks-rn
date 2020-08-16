@@ -26,7 +26,14 @@ export default class TaskList extends Component {
     }
 
     toggleTask = taskId => {
-        
+        const tasks = [...this.state.tasks]
+        tasks.forEach(task => {
+            if (task.id === taskId) {
+                task.doneAt = taskDoneAt ? null : new Date()
+            }
+        })
+
+        this.setState({ tasks: tasks })
     }
     
     render() {
