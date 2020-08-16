@@ -30,6 +30,10 @@ export default class TaskList extends Component {
         }]
     }
 
+    componentDidMount = () => {
+        this.filterTasks()
+    }
+
     toggleFilter = () => {
         this.setState({ showDoneTasks: !this.state.showDoneTasks })
     }
