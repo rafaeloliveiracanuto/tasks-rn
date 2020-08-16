@@ -2,10 +2,15 @@ import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Theme from '../Theme.js'
+import moment from 'moment'
+import 'moment/locale/en-gb'
 
 export default props => {
 
     const doneOrNotStyle = props.doneAt && { textDecorationLine: 'line-through' }
+
+    const date = props.doneAt ? props.doneAt : props.estimateAt
+    const formattedDate = moment(date).locale('en-gb').format('ddd, D MMMM')
 
     return (
         <View style={styles.container}>
@@ -14,7 +19,7 @@ export default props => {
             </View>
             <View>
                 <Text style={[styles.description, doneOrNotStyle]}>{props.description}</Text>
-                <Text>{props.estimateAt + ''}</Text> 
+                <Text style={styles.date}>{formattedDate}</Text> 
             </View>   
         </View>
     )
@@ -60,5 +65,10 @@ const styles = StyleSheet.create({
         fontFamily: Theme.fontFamily,
         color: Theme.colors.mainText,
         fontSize: 15,
+    },
+    date: {
+        fontFamily: Theme.fontFamily,
+        color: Theme.colors.subText,
+        fontSize: 12,
     }
 })
