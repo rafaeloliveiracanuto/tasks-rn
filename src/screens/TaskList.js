@@ -24,6 +24,10 @@ export default class TaskList extends Component {
             doneAt: null
         }]
     }
+
+    toggleTask = taskId => {
+        
+    }
     
     render() {
         const today = moment().locale('en-gb').format('ddd, D MMMM')
