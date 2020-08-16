@@ -16,6 +16,7 @@ export default class TaskList extends Component {
     
     state = {
         showDoneTasks: true,
+        visibleTasks: [],
         tasks: [{
             id: Math.random(),
             description: 'Buy React Native Book',
@@ -62,7 +63,7 @@ export default class TaskList extends Component {
                     </View>
                 </ImageBackground>
                 <View style={styles.taskList}>
-                    <FlatList data={this.state.tasks}
+                    <FlatList data={this.state.visibleTasks}
                         keyExtractor={item => `${item.id}`}
                         renderItem={({item}) => <Task {...item} toggleTask={this.toggleTask} /> } />
                 </View>
