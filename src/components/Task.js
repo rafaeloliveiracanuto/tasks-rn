@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, TiuchableWithoutFeedback } from 'react-native'
+import { View, Text, StyleSheet, TouchableWithoutFeedback } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Theme from '../Theme.js'
 import moment from 'moment'
