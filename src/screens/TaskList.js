@@ -35,7 +35,16 @@ export default class TaskList extends Component {
     }
 
     filterTasks = () => {
-        
+        let visibleTasks = null
+
+        if (this.state.showDoneTasks) {
+            visibleTasks = [...this.state.tasks]
+        } else {
+            const isPending = task => task.doneAt === null
+            visibleTasks = this.state.tasks.filter(isPending)
+        }
+
+        this.setState({ visibleTasks: visibleTasks })
     }
 
     toggleTask = taskId => {
