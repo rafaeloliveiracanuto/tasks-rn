@@ -34,6 +34,10 @@ export default class TaskList extends Component {
         this.setState({ showDoneTasks: !this.state.showDoneTasks })
     }
 
+    filterTasks = () => {
+        
+    }
+
     toggleTask = taskId => {
         const tasks = [...this.state.tasks]
         tasks.forEach(task => {
