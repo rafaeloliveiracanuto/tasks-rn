@@ -41,7 +41,6 @@ export default class TaskList extends Component {
                         keyExtractor={item => `${item.id}`}
                         renderItem={({item}) => <Task {...item} /> } />
                 </View>
-                
             </View>
         )
     }
