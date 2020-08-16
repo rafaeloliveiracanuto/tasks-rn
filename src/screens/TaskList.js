@@ -35,7 +35,7 @@ export default class TaskList extends Component {
     }
 
     toggleFilter = () => {
-        this.setState({ showDoneTasks: !this.state.showDoneTasks })
+        this.setState({ showDoneTasks: !this.state.showDoneTasks }, this.filterTasks)
     }
 
     filterTasks = () => {
