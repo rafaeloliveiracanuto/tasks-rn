@@ -50,6 +50,12 @@ export default class TaskList extends Component {
         return (   
             <View style={styles.container}>
                 <ImageBackground style={styles.background} source={todayImage}>
+                    <View style={styles.iconBar}>
+                        <TouchableOpacity onPress={this.toggleFilter}>
+                            <Icon name={this.state.showDoneTasks ? 'eye' : 'eye-slash'}
+                                size={20} color={Theme.colors.secondary}/>
+                        </TouchableOpacity>
+                    </View>
                     <View style={styles.titleBar}>
                         <Text style={styles.title}>Today</Text>
                         <Text style={styles.subtitle}>{today}</Text>
@@ -91,5 +97,11 @@ const styles = StyleSheet.create ({
         fontSize: 14,
         marginLeft: 40,
         marginBottom: 20
-    }
+    },
+    iconBar: {
+        flexDirection: 'row',
+        marginHorizontal: 20,
+        justifyContent: 'flex-end',
+        marginTop: Platform.OS === 'ios' ? 30 : 10,
+    },
 })
