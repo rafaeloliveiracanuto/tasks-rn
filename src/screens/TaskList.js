@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, ImageBackground, StyleSheet } from 'react-native'
+import { View, Text, ImageBackground, StyleSheet, FlatList } from 'react-native'
 
 import Theme from '../Theme'
 import todayImage from '../../assets/imgs/today.jpg'
@@ -10,6 +10,21 @@ import 'moment/locale/en-gb'
 import Task from '../components/Task'
 
 export default class TaskList extends Component {
+    
+    state = {
+        tasks: [{
+            id: Math.random(),
+            description: 'Buy React Native Book',
+            estimateAt: new Date(),
+            doneAt: new Date(),
+        }, {
+            id: Math.random(),
+            description: 'Read React Native Book',
+            estimateAt: new Date(),
+            doneAt: null
+        }]
+    }
+    
     render() {
         const today = moment().locale('en-gb').format('ddd, D MMMM')
 
