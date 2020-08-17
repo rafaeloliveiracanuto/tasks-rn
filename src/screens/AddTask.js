@@ -27,11 +27,11 @@ export default class AddTask extends Component {
                     <TextInput style={styles.input} />
                     <View style={styles.buttons}>
                         <TouchableOpacity>
-                            <Text>Cancel</Text>
+                            <Text style={styles.button}>Cancel</Text>
                         </TouchableOpacity>
-                        
+
                         <TouchableOpacity>
-                            <Text>Save</Text>
+                            <Text style={styles.button}>Save</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -51,7 +51,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(0, 0, 0, 0.7)'
     },
     container: {
-        flex: 1,
         backgroundColor: '#FFF'
     },
     header: {
@@ -63,11 +62,23 @@ const styles = StyleSheet.create({
         fontSize: 18,
     },
     input: {
+        fontFamily: Theme.fontFamily,
+        height: 40,
+        margin: 15,
+        backgroundColor: '#FFF',
+        borderWidth: 1,
+        borderColor: '#E3E3E3',
+        borderRadius: 6,
 
     },
     buttons: {
         flexDirection: 'row',
         justifyContent: 'flex-end',
-    }
+    },
+    button: {
+        margin: 20,
+        marginRight: 30,
+        color: Theme.colors.today,
+    },
 })
 
