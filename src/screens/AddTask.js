@@ -10,7 +10,13 @@ import { Modal,
 } from 'react-native'
 import Theme from '../Theme'
 
+const initialState = { description: '' }
+
 export default class AddTask extends Component {
+
+    state = {
+        ...initialState
+    }
 
     render () {
         return (
