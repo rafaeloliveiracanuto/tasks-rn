@@ -30,12 +30,15 @@ export default class AddTask extends Component {
                 </TouchableWithoutFeedback>
                 <View style={styles.container}>
                     <Text style={styles.header}>New Task</Text>
+                    
                     <TextInput style={styles.input} 
                         placeholder='Write a description...'
                         onChangeText={description => this.setState({ description })}
-                        value={this.state.description} />
+                        value={this.state.description}>
+                    </TextInput>
+
                     <View style={styles.buttons}>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={this.props.onCancel}>
                             <Text style={styles.button}>Cancel</Text>
                         </TouchableOpacity>
 
