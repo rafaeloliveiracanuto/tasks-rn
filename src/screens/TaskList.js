@@ -87,7 +87,8 @@ export default class TaskList extends Component {
                         keyExtractor={item => `${item.id}`}
                         renderItem={({item}) => <Task {...item} toggleTask={this.toggleTask} /> } />
                 </View>
-                <TouchableOpacity style={styles.addButton}>
+                <TouchableOpacity style={styles.addButton}
+                    onPress={() => this.setState({ showAddTask: true }) }>
                     <Icon name='plus' size={20}
                         color={Theme.colors.secondary} />
                 </TouchableOpacity>
