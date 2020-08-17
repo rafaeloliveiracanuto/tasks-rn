@@ -23,14 +23,16 @@ export default class AddTask extends Component {
             <Modal transparent={true} visible={this.props.isVisible}
                 onRequestClose={this.props.onCancel}
                 animationType='slide'>
+
                 <TouchableWithoutFeedback onPress={this.props.onCancel}>
                     <View style={styles.background}>
 
                     </View>
                 </TouchableWithoutFeedback>
+                
                 <View style={styles.container}>
                     <Text style={styles.header}>New Task</Text>
-                    
+
                     <TextInput style={styles.input} 
                         placeholder='Write a description...'
                         onChangeText={description => this.setState({ description })}
@@ -47,6 +49,7 @@ export default class AddTask extends Component {
                         </TouchableOpacity>
                     </View>
                 </View>
+
                 <TouchableWithoutFeedback onPress={this.props.onCancel}>
                     <View style={styles.background}>
 
