@@ -2,9 +2,11 @@
 import React, { Component } from 'react'
 import { Modal, 
     View,
+    Text,
     StyleSheet,
     TouchableWithoutFeedback 
 } from 'react-native'
+import Theme from '../Theme'
 
 export default class AddTask extends Component {
 
@@ -19,7 +21,7 @@ export default class AddTask extends Component {
                     </View>
                 </TouchableWithoutFeedback>
                 <View style={styles.container}>
-
+                    <Text style={styles.header}>New Task</Text>
                 </View>
                 <TouchableWithoutFeedback onPress={this.props.onCancel}>
                     <View style={styles.background}>
@@ -39,6 +41,14 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#FFF'
-    }
+    },
+    header: {
+        fontFamily: Theme.fontFamily,
+        backgroundColor: Theme.colors.today,
+        color: Theme.colors.secondary,
+        textAlign: 'center',
+        padding: 15,
+        fontSize: 18,
+    },
 })
 
