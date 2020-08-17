@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import { Modal, 
     View,
     Text,
+    TouchableOpacity,
+    TextInput,
     StyleSheet,
     TouchableWithoutFeedback 
 } from 'react-native'
@@ -22,6 +24,16 @@ export default class AddTask extends Component {
                 </TouchableWithoutFeedback>
                 <View style={styles.container}>
                     <Text style={styles.header}>New Task</Text>
+                    <TextInput style={styles.input} />
+                    <View style={styles.buttons}>
+                        <TouchableOpacity>
+                            <Text>Cancel</Text>
+                        </TouchableOpacity>
+                        
+                        <TouchableOpacity>
+                            <Text>Save</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
                 <TouchableWithoutFeedback onPress={this.props.onCancel}>
                     <View style={styles.background}>
@@ -50,5 +62,12 @@ const styles = StyleSheet.create({
         padding: 15,
         fontSize: 18,
     },
+    input: {
+
+    },
+    buttons: {
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+    }
 })
 
