@@ -63,6 +63,10 @@ export default class TaskList extends Component {
 
         this.setState({ tasks: tasks }, this.filterTasks)
     }
+
+    addTask = newTask => {
+
+    }
     
     render() {
         const today = moment().locale('en-gb').format('ddd, D MMMM')
