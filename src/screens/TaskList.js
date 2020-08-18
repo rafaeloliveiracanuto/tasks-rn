@@ -1,6 +1,13 @@
 /* eslint-disable */
 import React, { Component } from 'react'
-import { View, Text, ImageBackground, StyleSheet, FlatList, TouchableOpacity, Platform } from 'react-native'
+import { View, 
+    Text, 
+    ImageBackground, 
+    StyleSheet, 
+    FlatList, 
+    TouchableOpacity, 
+    Platform, 
+    Alert } from 'react-native'
 
 import Theme from '../Theme'
 import todayImage from '../../assets/imgs/today.jpg'
@@ -66,8 +73,19 @@ export default class TaskList extends Component {
 
     addTask = newTask => {
         if (!newTask.description || !newTask.description.trim()) {
-
+            Alert.alert('Invalid data', 'Description not informed!')
+            return 
         }
+
+        const tasks = [...this.state.tasks]
+        tasks.push({
+            id: Math.random(),
+            description: newTask.description,
+            estimateAt: newTask.date,
+            doneAt: null
+        })
+
+        this.setState({ tasks: tasks, showAddTask: false }, this.filterTasks)
     }
     
     render() {
