@@ -8,14 +8,22 @@ import { Modal,
     StyleSheet,
     TouchableWithoutFeedback 
 } from 'react-native'
+
+import DateTimePicker from '@react-native-community/datetimepicker' 
+
 import Theme from '../Theme'
 
-const initialState = { description: '' }
+const initialState = { description: '', date: new Date() }
 
 export default class AddTask extends Component {
 
     state = {
         ...initialState
+    }
+
+    getDateTimePicker = () => {
+        return <DateTimePicker value={this.state.date}
+            onChange={(_, date) => this.setState({ date: date })} />
     }
 
     render () {
