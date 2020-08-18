@@ -18,8 +18,14 @@ export default props => {
     const date = props.doneAt ? props.doneAt : props.estimateAt
     const formattedDate = moment(date).locale('en-gb').format('ddd, D MMMM')
 
+    const getRightContent = () => {
+        return (
+            
+        )
+    }
+
     return (
-        <Swipeable>
+        <Swipeable renderRightActions={}>
             <View style={styles.container}>
                 <TouchableWithoutFeedback onPress={() => props.toggleTask(props.id)}>
                     <View style={styles.checkContainer}>
