@@ -21,10 +21,12 @@ export default class AddTask extends Component {
         ...initialState
     }
 
-    getDateTimePicker = () => {
-        return <DateTimePicker value={this.state.date}
+    getDatePicker = () => {
+        let datePicker = <DateTimePicker value={this.state.date}
             onChange={(_, date) => this.setState({ date: date })}
             mode='date' />
+
+        return datePicker
     }
 
     render () {
@@ -48,7 +50,7 @@ export default class AddTask extends Component {
                         value={this.state.description}>
                     </TextInput>
 
-                    {this.getDateTimePicker()}
+                    {this.getDatePicker()}
 
                     <View style={styles.buttons}>
                         <TouchableOpacity onPress={this.props.onCancel}>
