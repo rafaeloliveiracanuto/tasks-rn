@@ -27,7 +27,7 @@ export default props => {
     }
 
     return (
-        <Swipeable renderRightActions={}>
+        <Swipeable renderRightActions={getRightContent}>
             <View style={styles.container}>
                 <TouchableWithoutFeedback onPress={() => props.toggleTask(props.id)}>
                     <View style={styles.checkContainer}>
