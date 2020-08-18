@@ -23,7 +23,8 @@ export default class AddTask extends Component {
 
     getDateTimePicker = () => {
         return <DateTimePicker value={this.state.date}
-            onChange={(_, date) => this.setState({ date: date })} />
+            onChange={(_, date) => this.setState({ date: date })}
+            mode='date' />
     }
 
     render () {
@@ -46,6 +47,8 @@ export default class AddTask extends Component {
                         onChangeText={description => this.setState({ description })}
                         value={this.state.description}>
                     </TextInput>
+
+                    {this.getDateTimePicker()}
 
                     <View style={styles.buttons}>
                         <TouchableOpacity onPress={this.props.onCancel}>
