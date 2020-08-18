@@ -65,7 +65,9 @@ export default class TaskList extends Component {
     }
 
     addTask = newTask => {
+        if (!newTask.description || !newTask.description.trim()) {
 
+        }
     }
     
     render() {
@@ -73,7 +75,9 @@ export default class TaskList extends Component {
 
         return (   
             <View style={styles.container}>
-                <AddTask isVisible={this.state.showAddTask} onCancel={() => this.setState({ showAddTask: false })} />
+                <AddTask isVisible={this.state.showAddTask} 
+                    onCancel={() => this.setState({ showAddTask: false })}
+                    onSave={this.addTask} />
                 <ImageBackground style={styles.background} source={todayImage}>
                     <View style={styles.iconBar}>
                         <TouchableOpacity onPress={this.toggleFilter}>
