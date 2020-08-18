@@ -24,7 +24,13 @@ export default class AddTask extends Component {
     }
 
     save = () => {
-        
+        const newTask = {
+            description: this.state.description,
+            date: this.state.date
+        }
+
+        this.props.onSave && this.props.onSave(newTask)
+        this.setState({ ...initialState })
     }
 
     getDatePicker = () => {
