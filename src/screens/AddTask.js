@@ -28,16 +28,17 @@ export default class AddTask extends Component {
             onChange={(_, date) => this.setState({ date: date, showDatePicker: false })}
             mode='date' />
 
-        const dateString = moment(this.state.date).format('ddd, D MMMM')
+        const dateString = moment(this.state.date).format('ddd, D MMMM [of] YYYY')
 
         if (Platform.OS === 'android') {
             datePicker = (
                 <View>
-                    <TouchableOpacity>
-                        <Text>
-
+                    <TouchableOpacity onPress={() => this.setState({ showDatePicker: true })}>
+                        <Text style={styles.date}>
+                            {dateString}
                         </Text>
                     </TouchableOpacity>
+                    {this.state.showDatePicker && datePicker}
                 </View>
             )
         }
@@ -123,6 +124,11 @@ const styles = StyleSheet.create({
         margin: 20,
         marginRight: 30,
         color: Theme.colors.today,
+    },
+    date: {
+        fontFamily: Theme.fontFamily,
+        fontSize: 20,
+        marginLeft: 15,
     },
 })
 
