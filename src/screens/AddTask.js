@@ -23,6 +23,10 @@ export default class AddTask extends Component {
         ...initialState
     }
 
+    save = () => {
+        
+    }
+
     getDatePicker = () => {
         let datePicker = <DateTimePicker value={this.state.date}
             onChange={(_, date) => this.setState({ date: date, showDatePicker: false })}
