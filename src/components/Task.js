@@ -1,6 +1,12 @@
 /* eslint-disable */ 
 import React from 'react'
-import { View, Text, StyleSheet, TouchableWithoutFeedback } from 'react-native'
+import { View,
+    Text,
+    StyleSheet, 
+    TouchableWithoutFeedback, 
+    TouchableOpacity
+} from 'react-native'
+import Swipeable from 'react-native-gesture-handler/Swipeable'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Theme from '../Theme.js'
 import moment from 'moment'
@@ -13,17 +19,19 @@ export default props => {
     const formattedDate = moment(date).locale('en-gb').format('ddd, D MMMM')
 
     return (
-        <View style={styles.container}>
-            <TouchableWithoutFeedback onPress={() => props.toggleTask(props.id)}>
-                <View style={styles.checkContainer}>
-                    {getCheckView(props.doneAt)}
-                </View>
-            </TouchableWithoutFeedback>
-            <View>
-                <Text style={[styles.description, doneOrNotStyle]}>{props.description}</Text>
-                <Text style={styles.date}>{formattedDate}</Text> 
-            </View>   
-        </View>
+        <Swipeable>
+            <View style={styles.container}>
+                <TouchableWithoutFeedback onPress={() => props.toggleTask(props.id)}>
+                    <View style={styles.checkContainer}>
+                        {getCheckView(props.doneAt)}
+                    </View>
+                </TouchableWithoutFeedback>
+                <View>
+                    <Text style={[styles.description, doneOrNotStyle]}>{props.description}</Text>
+                    <Text style={styles.date}>{formattedDate}</Text> 
+                </View>   
+            </View>
+        </Swipeable>
     )
 }
 
