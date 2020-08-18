@@ -20,7 +20,9 @@ export default props => {
 
     const getRightContent = () => {
         return (
-            
+            <TouchableOpacity style={styles.right}>
+                <Icon name='trash' size={30} color='#FFF' />
+            </TouchableOpacity>
         )
     }
 
@@ -86,5 +88,12 @@ const styles = StyleSheet.create({
         fontFamily: Theme.fontFamily,
         color: Theme.colors.subText,
         fontSize: 12,
+    },
+    right: {
+        backgroundColor: 'red',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        paddingHorizontal: 20,
     }
 })
