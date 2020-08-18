@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React, { Component } from 'react'
-import { Modal, 
+import { Modal,
+    Platform, 
     View,
     Text,
     TouchableOpacity,
@@ -9,11 +10,12 @@ import { Modal,
     TouchableWithoutFeedback 
 } from 'react-native'
 
+import moment from 'moment'
 import DateTimePicker from '@react-native-community/datetimepicker' 
 
 import Theme from '../Theme'
 
-const initialState = { description: '', date: new Date() }
+const initialState = { description: '', date: new Date(), showDatePicker: false }
 
 export default class AddTask extends Component {
 
@@ -23,8 +25,22 @@ export default class AddTask extends Component {
 
     getDatePicker = () => {
         let datePicker = <DateTimePicker value={this.state.date}
-            onChange={(_, date) => this.setState({ date: date })}
+            onChange={(_, date) => this.setState({ date: date, showDatePicker: false })}
             mode='date' />
+
+        const dateString = moment(this.state.date).format('ddd, D MMMM')
+
+        if (Platform.OS === 'android') {
+            datePicker = (
+                <View>
+                    <TouchableOpacity>
+                        <Text>
+
+                        </Text>
+                    </TouchableOpacity>
+                </View>
+            )
+        }
 
         return datePicker
     }
