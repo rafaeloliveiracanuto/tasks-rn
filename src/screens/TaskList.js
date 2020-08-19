@@ -87,6 +87,10 @@ export default class TaskList extends Component {
 
         this.setState({ tasks: tasks, showAddTask: false }, this.filterTasks)
     }
+
+    deleteTask = id => {
+        
+    }
     
     render() {
         const today = moment().locale('en-gb').format('ddd, D MMMM')
