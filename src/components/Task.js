@@ -29,7 +29,8 @@ export default props => {
     const getLeftContent = () => {
         return (
             <View style={styles.left}>
-                <Icon name='trash' size={20} color='#FFF' />
+                <Icon name='trash' size={20} color='#FFF'
+                    style={styles.deleteIcon} />
                 <Text style={styles.deleteText}>Delete</Text>
             </View>
         )
@@ -67,6 +68,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         alignItems: 'center',
         paddingVertical: 10,
+        backgroundColor: '#FFF',
     },
     checkContainer: {
         width: '20%',
@@ -106,9 +108,13 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
     },
     left: {
+        flex: 1,
         backgroundColor:'red',
         flexDirection: 'row',
         alignItems: 'center',
+    },
+    deleteIcon: {
+        marginLeft: 10,
     },
     deleteText: {
         fontFamily: Theme.fontFamily,
