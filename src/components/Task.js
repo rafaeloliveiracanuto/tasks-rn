@@ -27,11 +27,16 @@ export default props => {
     }
 
     const getLeftContent = () => {
-        
+        return (
+            <View style={styles.left}>
+                <Icon name='trash' size={20} color='#FFF' />
+                <Text style={styles.deleteText}>Delete</Text>
+            </View>
+        )
     }
 
     return (
-        <Swipeable renderRightActions={getRightContent}>
+        <Swipeable renderRightActions={getRightContent} renderLeftActions={getLeftContent}>
             <View style={styles.container}>
                 <TouchableWithoutFeedback onPress={() => props.toggleTask(props.id)}>
                     <View style={styles.checkContainer}>
