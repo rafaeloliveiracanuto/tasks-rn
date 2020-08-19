@@ -48,7 +48,7 @@ export default class TaskList extends Component {
         }
 
         this.setState({ visibleTasks: visibleTasks })
-        
+        AsyncStorage.setItem('state', JSON.stringify(this.state))
     }
 
     toggleTask = taskId => {
