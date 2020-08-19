@@ -26,6 +26,10 @@ export default props => {
         )
     }
 
+    const getLeftContent = () => {
+        
+    }
+
     return (
         <Swipeable renderRightActions={getRightContent}>
             <View style={styles.container}>
