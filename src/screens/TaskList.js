@@ -20,17 +20,23 @@ import 'moment/locale/en-gb'
 import Task from '../components/Task'
 import AddTask from './AddTask'
 
+const initialState = { 
+    showDoneTasks: true,
+    showAddTask: false,
+    visibleTasks: [],
+    tasks: []
+}
+
 export default class TaskList extends Component {
     
     state = {
-        showDoneTasks: true,
-        showAddTask: false,
-        visibleTasks: [],
-        tasks: []
+        ...initialState
     }
 
-    componentDidMount = () => {
-        this.filterTasks()
+    componentDidMount = async () => {
+        const stateString = await AsyncStorage.getItem('tasksState')
+        const state = JSON.parse(stateString) || initialState
+        this.setState(state)
     }
 
     toggleFilter = () => {
@@ -48,7 +54,7 @@ export default class TaskList extends Component {
         }
 
         this.setState({ visibleTasks: visibleTasks })
-        AsyncStorage.setItem('state', JSON.stringify(this.state))
+        AsyncStorage.setItem('tasksState', JSON.stringify(this.state))
     }
 
     toggleTask = taskId => {
