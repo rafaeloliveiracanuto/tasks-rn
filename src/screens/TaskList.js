@@ -9,9 +9,9 @@ import { View,
     Platform, 
     Alert } from 'react-native'
 
+import AsyncStorage from '@react-native-community/async-storage'
 import Theme from '../Theme'
 import todayImage from '../../assets/imgs/today.jpg'
-
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 import moment from 'moment'
@@ -48,6 +48,7 @@ export default class TaskList extends Component {
         }
 
         this.setState({ visibleTasks: visibleTasks })
+        
     }
 
     toggleTask = taskId => {
