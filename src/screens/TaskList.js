@@ -26,17 +26,7 @@ export default class TaskList extends Component {
         showDoneTasks: true,
         showAddTask: false,
         visibleTasks: [],
-        tasks: [{
-            id: Math.random(),
-            description: 'Buy React Native Book',
-            estimateAt: new Date(),
-            doneAt: new Date(),
-        }, {
-            id: Math.random(),
-            description: 'Read React Native Book',
-            estimateAt: new Date(),
-            doneAt: null
-        }]
+        tasks: []
     }
 
     componentDidMount = () => {
