@@ -116,7 +116,7 @@ export default class TaskList extends Component {
                 <View style={styles.taskList}>
                     <FlatList data={this.state.visibleTasks}
                         keyExtractor={item => `${item.id}`}
-                        renderItem={({item}) => <Task {...item} toggleTask={this.toggleTask} /> } />
+                        renderItem={({item}) => <Task {...item} toggleTask={this.toggleTask} onDelete={this.deleteTask} /> } />
                 </View>
                 <TouchableOpacity style={styles.addButton}
                     activeOpacity={0.7}
