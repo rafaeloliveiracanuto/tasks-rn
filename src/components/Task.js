@@ -104,5 +104,16 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'flex-end',
         paddingHorizontal: 20,
-    }
+    },
+    left: {
+        backgroundColor:'red',
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    deleteText: {
+        fontFamily: Theme.fontFamily,
+        color: '#FFF',
+        fontSize: 20,
+        margin: 10
+    },
 })
