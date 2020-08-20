@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
         padding: Platform.OS === 'ios' ? 15 : 10
     },
     formContainer: {
-        backgroundColor: 'rgba(0, 0, 0, 0.8',
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
         padding: 20,
         width: '90%',
     },
