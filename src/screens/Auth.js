@@ -50,7 +50,7 @@ export default class Auth extends Component {
                             onChangeText={confirmPassword => this.setState({ confirmPassword })} />
                     }
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={this.signInOrSignUp}>
                         <View style={styles.button}>
                             <Text style={styles.buttonText}>
                                 {this.state.stageNew ? 'Sign up' : 'Sign in'}
@@ -58,6 +58,10 @@ export default class Auth extends Component {
                         </View>
                     </TouchableOpacity>
                 </View>
+                <TouchableOpacity style={{ padding: 10 }} 
+                    onPress={ () => this.setState({ stageNew: !this.state.stageNew }) }>
+
+                </TouchableOpacity>
             </ImageBackground>
         )
     }
