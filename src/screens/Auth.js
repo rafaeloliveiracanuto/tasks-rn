@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { Component } from 'react'
-import { ImageBackground, Text, StyleSheet,
+import { ImageBackground, Text, StyleSheet, Alert,
     View, TextInput, TouchableOpacity, Platform } from 'react-native'
 
 import backgroundImage from '../../assets/imgs/login.jpg'
@@ -14,6 +14,10 @@ export default class Auth extends Component {
         password: '',
         confirmPassword: '',
         stageNew: true,
+    }
+
+    signInOrSignUp = () => {
+        
     }
 
     render() {
