@@ -9,8 +9,11 @@ import Theme from '../Theme'
 export default class Auth extends Component {
 
     state = {
+        name: '',
         email: '',
         password: '',
+        confirmPassword: '',
+        stageNew: true,
     }
 
     render() {
