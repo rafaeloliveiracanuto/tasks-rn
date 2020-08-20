@@ -23,6 +23,11 @@ export default class Auth extends Component {
                         style={styles.input} onChangeText={email => this.setState({ email })} />
                     <TextInput placeholder='Password' value={this.state.password}
                         style={styles.input} onChangeText={password => this.setState({ password })} />
+                    <TouchableOpacity>
+                        <View style={styles.button}>
+                            <Text style={styles.buttonText}>Sign in</Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
             </ImageBackground>
         )
@@ -51,6 +56,11 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(0, 0, 0, 0.8',
         padding: 20,
         width: '90%',
+    },
+    button: {
+
+    },
+    buttonText: {
 
     },
 })
