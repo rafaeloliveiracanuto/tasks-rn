@@ -22,6 +22,10 @@ export default class Auth extends Component {
                 source={backgroundImage}>
                 <Text style={styles.title}>Tasks</Text>
                 <View style={styles.formContainer}>
+                    {this.state.stageNew && 
+                        <TextInput placeholder='Name' value={this.state.name}
+                            style={styles.input} onChangeText={name => this.setState({ name })} />
+                    }
                     <TextInput placeholder='E-mail' value={this.state.email}
                         style={styles.input} onChangeText={email => this.setState({ email })} />
                     <TextInput placeholder='Password' value={this.state.password}
