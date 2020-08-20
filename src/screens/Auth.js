@@ -43,9 +43,13 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     input: {
-
+        marginTop: 10,
+        backgroundColor: '#FFF',
     },
     formContainer: {
-        
+        backgroundColor: 'rgba(0, 0, 0, 0.8',
+        padding: 20,
+        width: '90%',
+
     },
 })
