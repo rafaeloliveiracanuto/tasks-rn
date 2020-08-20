@@ -37,7 +37,9 @@ export default class Auth extends Component {
                     }
                     <TouchableOpacity>
                         <View style={styles.button}>
-                            <Text style={styles.buttonText}>Sign in</Text>
+                            <Text style={styles.buttonText}>
+                                {this.state.stageNew ? 'Sign up' : 'Sign in'}
+                            </Text>
                         </View>
                     </TouchableOpacity>
                 </View>
