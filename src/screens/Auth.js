@@ -25,19 +25,23 @@ export default class Auth extends Component {
                     <Text style={styles.subtitle}>
                         {this.state.stageNew ? 'Create an account' : 'Enter your data'}
                     </Text>
+
                     {this.state.stageNew && 
                         <TextInput placeholder='Name' value={this.state.name}
                             style={styles.input} onChangeText={name => this.setState({ name })} />
                     }
+
                     <TextInput placeholder='E-mail' value={this.state.email}
                         style={styles.input} onChangeText={email => this.setState({ email })} />
                     <TextInput placeholder='Password' secureTextEntry={true} value={this.state.password}
                         style={styles.input} onChangeText={password => this.setState({ password })} />
+                    
                     {this.state.stageNew && 
                         <TextInput placeholder='Confirm password' secureTextEntry={true}
                             value={this.state.confirmPassword} style={styles.input} 
                             onChangeText={confirmPassword => this.setState({ confirmPassword })} />
                     }
+
                     <TouchableOpacity>
                         <View style={styles.button}>
                             <Text style={styles.buttonText}>
