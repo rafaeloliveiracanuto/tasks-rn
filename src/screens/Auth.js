@@ -28,8 +28,13 @@ export default class Auth extends Component {
                     }
                     <TextInput placeholder='E-mail' value={this.state.email}
                         style={styles.input} onChangeText={email => this.setState({ email })} />
-                    <TextInput placeholder='Password' value={this.state.password}
+                    <TextInput placeholder='Password' secureTextEntry={true} value={this.state.password}
                         style={styles.input} onChangeText={password => this.setState({ password })} />
+                    {this.state.stageNew && 
+                        <TextInput placeholder='Confirm password' secureTextEntry={true}
+                            value={this.state.confirmPassword} style={styles.input} 
+                            onChangeText={confirmPassword => this.setState({ confirmPassword })} />
+                    }
                     <TouchableOpacity>
                         <View style={styles.button}>
                             <Text style={styles.buttonText}>Sign in</Text>
