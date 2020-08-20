@@ -19,7 +19,10 @@ export default class Auth extends Component {
                 source={backgroundImage}>
                 <Text style={styles.title}>Tasks</Text>
                 <View>
-                    
+                    <TextInput placeholder='E-mail' value={this.state.email}
+                        style={styles.input} onChangeText={email => this.setState({ email })} />
+                    <TextInput placeholder='Password' value={this.state.password}
+                        style={styles.input} onChangeText={password => this.setState({ password })} />
                 </View>
             </ImageBackground>
         )
@@ -38,5 +41,8 @@ const styles = StyleSheet.create({
         color: Theme.colors.secondary,
         fontSize: 70,
         marginBottom: 10,
+    },
+    input: {
+
     },
 })
