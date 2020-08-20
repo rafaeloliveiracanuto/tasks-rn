@@ -64,6 +64,13 @@ const styles = StyleSheet.create({
         fontSize: 70,
         marginBottom: 10,
     },
+    subtitle: {
+        fontFamily: Theme.fontFamily,
+        color: '#FFF',
+        fontSize: 20,
+        textAlign: 'center',
+        marginBottom: 10,
+    },
     input: {
         marginTop: 10,
         backgroundColor: '#FFF',
