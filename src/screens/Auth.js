@@ -58,9 +58,14 @@ const styles = StyleSheet.create({
         width: '90%',
     },
     button: {
-
+        backgroundColor: '#080',
+        marginTop: 10,
+        padding: 10,
+        alignItems: 'center',  
     },
     buttonText: {
-
+        fontFamily: Theme.fontFamily,
+        color: '#FFF',
+        fontSize: 20,
     },
 })
