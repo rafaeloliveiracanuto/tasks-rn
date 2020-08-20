@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { Component } from 'react'
 import { ImageBackground, Text, StyleSheet,
-    View, TextInput, TouchableOpacity } from 'react-native'
+    View, TextInput, TouchableOpacity, Platform } from 'react-native'
 
 import backgroundImage from '../../assets/imgs/login.jpg'
 import Theme from '../Theme'
@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     input: {
         marginTop: 10,
         backgroundColor: '#FFF',
+        padding: Platform.OS === 'ios' ? 15 : 10
     },
     formContainer: {
         backgroundColor: 'rgba(0, 0, 0, 0.8',
