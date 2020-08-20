@@ -1,16 +1,26 @@
 /* eslint-disable */
 import React, { Component } from 'react'
-import { ImageBackground, Text, StyleSheet }from 'react-native'
+import { ImageBackground, Text, StyleSheet,
+    View, TextInput, TouchableOpacity } from 'react-native'
 
 import backgroundImage from '../../assets/imgs/login.jpg'
 import Theme from '../Theme'
 
 export default class Auth extends Component {
+
+    state = {
+        email: '',
+        password: '',
+    }
+
     render() {
         return (
             <ImageBackground style={styles.background}
                 source={backgroundImage}>
                 <Text style={styles.title}>Tasks</Text>
+                <View>
+                    
+                </View>
             </ImageBackground>
         )
     }
