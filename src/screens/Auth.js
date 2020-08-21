@@ -94,7 +94,6 @@ const styles = StyleSheet.create({
     input: {
         marginTop: 10,
         backgroundColor: '#FFF',
-        padding: Platform.OS === 'ios' ? 15 : 10
     },
     formContainer: {
         backgroundColor: 'rgba(0, 0, 0, 0.8)',
