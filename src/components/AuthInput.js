@@ -7,13 +7,19 @@ export default props => {
     return (
         <View style={[styles.container, props.style]}>
             <Icon name={props.icon} size={20} style={styles.icon} />
-            <TextInput {...props} />
+            <TextInput {...props} style={styles.input} />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
+
+    },
+    icon: {
+
+    },
+    input: {
 
     },
 })
