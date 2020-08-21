@@ -15,3 +15,7 @@ const MainRoutes = {
         screen: TaskList,
     }
 }
+
+const MainNavigator = createSwitchNavigator(MainRoutes, {
+    
+})
