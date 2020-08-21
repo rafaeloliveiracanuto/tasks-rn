@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { Component } from 'react'
 import { ImageBackground, Text, StyleSheet, Alert,
-    View, TextInput, TouchableOpacity, Platform } from 'react-native'
+    View, TouchableOpacity } from 'react-native'
 
 import backgroundImage from '../../assets/imgs/login.jpg'
 import Theme from '../Theme'
@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
         width: '100%',
         alignItems: 'center',
         justifyContent: 'center',
+        //backgroundColor: 'rgba(0, 0, 0, 0.5)',
     },
     title: {
         fontFamily: Theme.fontFamily,
@@ -96,15 +97,17 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF',
     },
     formContainer: {
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        backgroundColor: 'rgba(0, 0, 0, 0.3)',
         padding: 20,
         width: '90%',
+        borderRadius: 15,
     },
     button: {
         backgroundColor: '#080',
         marginTop: 10,
         padding: 10,
-        alignItems: 'center',  
+        alignItems: 'center',
+        borderRadius: 15,  
     },
     buttonText: {
         fontFamily: Theme.fontFamily,
