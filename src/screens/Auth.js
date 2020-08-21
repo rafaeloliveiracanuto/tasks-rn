@@ -42,11 +42,14 @@ export default class Auth extends Component {
 
                     <AuthInput icon='at' placeholder='E-mail' value={this.state.email}
                         style={styles.input} onChangeText={email => this.setState({ email })} />
-                    <AuthInput icon='lock' placeholder='Password' secureTextEntry={true} value={this.state.password}
+
+                    <AuthInput icon='lock' placeholder='Password' 
+                        secureTextEntry={true} value={this.state.password}
                         style={styles.input} onChangeText={password => this.setState({ password })} />
                     
                     {this.state.stageNew && 
-                        <AuthInput icon='asterisk' placeholder='Confirm password' secureTextEntry={true}
+                        <AuthInput icon='asterisk' 
+                            placeholder='Confirm password' secureTextEntry={true}
                             value={this.state.confirmPassword} style={styles.input} 
                             onChangeText={confirmPassword => this.setState({ confirmPassword })} />
                     }
@@ -62,7 +65,8 @@ export default class Auth extends Component {
                 <TouchableOpacity style={{ padding: 10 }} 
                     onPress={ () => this.setState({ stageNew: !this.state.stageNew }) }>
                     <Text style={styles.buttonText}>
-                        {this.state.stageNew ? 'Do you already have an account?' : 'Do not have an account yet?'}
+                        {this.state.stageNew ? 'Do you already have an account?'
+                            : 'Do not have an account yet?'}
                     </Text>
 
                 </TouchableOpacity>
