@@ -13,7 +13,7 @@ export default class Auth extends Component {
         email: '',
         password: '',
         confirmPassword: '',
-        stageNew: true,
+        stageNew: false,
     }
 
     signInOrSignUp = () => {
@@ -60,6 +60,9 @@ export default class Auth extends Component {
                 </View>
                 <TouchableOpacity style={{ padding: 10 }} 
                     onPress={ () => this.setState({ stageNew: !this.state.stageNew }) }>
+                    <Text style={styles.buttonText}>
+                        {this.state.stageNew ? 'Do you already have an account?' : 'Do not have an account yet?'}
+                    </Text>
 
                 </TouchableOpacity>
             </ImageBackground>
