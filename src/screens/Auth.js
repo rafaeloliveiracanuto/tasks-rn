@@ -36,17 +36,17 @@ export default class Auth extends Component {
                     </Text>
 
                     {this.state.stageNew && 
-                        <TextInput placeholder='Name' value={this.state.name}
+                        <TextInput icon='user' placeholder='Name' value={this.state.name}
                             style={styles.input} onChangeText={name => this.setState({ name })} />
                     }
 
-                    <TextInput placeholder='E-mail' value={this.state.email}
+                    <AuthInput icon='at' placeholder='E-mail' value={this.state.email}
                         style={styles.input} onChangeText={email => this.setState({ email })} />
-                    <TextInput placeholder='Password' secureTextEntry={true} value={this.state.password}
+                    <TextInput icon='lock' placeholder='Password' secureTextEntry={true} value={this.state.password}
                         style={styles.input} onChangeText={password => this.setState({ password })} />
                     
                     {this.state.stageNew && 
-                        <TextInput placeholder='Confirm password' secureTextEntry={true}
+                        <TextInput icon='asterisk' placeholder='Confirm password' secureTextEntry={true}
                             value={this.state.confirmPassword} style={styles.input} 
                             onChangeText={confirmPassword => this.setState({ confirmPassword })} />
                     }
