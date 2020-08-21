@@ -5,6 +5,7 @@ import { ImageBackground, Text, StyleSheet, Alert,
 
 import backgroundImage from '../../assets/imgs/login.jpg'
 import Theme from '../Theme'
+import AuthInput from '../components/AuthInput'
 
 export default class Auth extends Component {
 
