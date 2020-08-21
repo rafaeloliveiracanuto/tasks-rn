@@ -16,6 +16,8 @@ const MainRoutes = {
     }
 }
 
-const MainNavigator = createSwitchNavigator(MainRoutes, {
-    
+const mainNavigator = createSwitchNavigator(MainRoutes, {
+    initialRouteName: 'Auth'
 })
+
+export default createAppContainer(mainNavigator)
