@@ -22,7 +22,7 @@ export default class Auth extends Component {
 
     signInOrSignUp = () => {
         if (this.state.stageNew) {
-            Alert.alert('Success!', 'Create account')
+            this.signUp()
         } else {
             Alert.alert('Success!', 'Do Login')
         }
