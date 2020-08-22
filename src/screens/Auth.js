@@ -7,6 +7,8 @@ import backgroundImage from '../../assets/imgs/login.jpg'
 import Theme from '../Theme'
 import AuthInput from '../components/AuthInput'
 
+import {server, showError, showSuccess} from '../common'
+
 export default class Auth extends Component {
 
     state = {
