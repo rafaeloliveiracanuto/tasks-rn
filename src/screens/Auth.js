@@ -27,6 +27,10 @@ export default class Auth extends Component {
         }
     }
 
+    signUp = () => {
+        
+    }
+
     render() {
         return (
             <View style={styles.screenContainer}>               
